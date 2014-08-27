@@ -2,6 +2,7 @@
 
 var User = require('../models/user');
 
+// sets res.locals.user from req.session.userId inside the cookie
 exports.authenticate = function(req, res, next){
   if(!req.session.userId){return next();}
 
